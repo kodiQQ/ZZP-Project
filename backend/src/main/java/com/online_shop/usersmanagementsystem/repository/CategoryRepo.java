@@ -4,6 +4,8 @@ import com.online_shop.usersmanagementsystem.entity.CategoryEntity;
 import com.online_shop.usersmanagementsystem.entity.ProductsEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CategoryRepo extends JpaRepository<CategoryEntity, Integer> {
+import java.util.List;
 
+public interface CategoryRepo extends JpaRepository<CategoryEntity, Integer> {
+    List<CategoryEntity> findByUserId(Long userId);
 }
